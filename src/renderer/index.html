@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PcVerify - Vérification de votre PC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PcVerify</h1>
+            <p class="subtitle">Analyse complète de votre système pour détecter les fichiers suspects, vérifier les périphériques et optimiser les performances de votre PC</p>
+        </header>
+        
+        <div class="main-content">
+            <section class="scan-section">
+                <h2 class="section-title">Analyse du système</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-text" id="progressText">Prêt à scanner votre système</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                
+                <button class="btn" id="scanBtn">Démarrer la vérification</button>
+                <button class="btn btn-warning" id="cleanBtn">Nettoyer le cache</button>
+                
+                <h3>Vérifications effectuées :</h3>
+                <ul class="check-list">
+                    <li id="fileCheck">
+                        <span class="status-icon">🔍</span>
+                        <span>Fichiers Composium et suspects</span>
+                    </li>
+                    <li id="exeCheck">
+                        <span class="status-icon">⚠️</span>
+                        <span>Exécutables (.exe) non autorisés</span>
+                    </li>
+                    <li id="deviceCheck">
+                        <span class="status-icon">🔌</span>
+                        <span>Périphériques connectés</span>
+                    </li>
+                    <li id="cacheCheck">
+                        <span class="status-icon">🧹</span>
+                        <span>Cache système et applications</span>
+                    </li>
+                    <li id="perfCheck">
+                        <span class="status-icon">📊</span>
+                        <span>Performances globales du système</span>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="results-section">
+                <h2 class="section-title">Résultats & Conseils</h2>
+                
+                <div id="resultsContainer">
+                    <div class="result-card">
+                        <h3>📋 Bilan du système</h3>
+                        <p>Aucune analyse effectuée. Veuillez lancer la vérification pour obtenir un rapport complet de votre système.</p>
+                    </div>
+                    
+                    <div class="result-card hidden" id="fileResults">
+                        <h3>🔍 Fichiers analysés</h3>
+                        <p id="fileStatus">Analyse en cours...</p>
+                    </div>
+                    
+                    <div class="result-card hidden" id="exeResults">
+                        <h3>⚠️ Exécutables vérifiés</h3>
+                        <p id="exeStatus">Analyse en cours...</p>
+                    </div>
+                    
+                    <div class="result-card hidden" id="deviceResults">
+                        <h3>🔌 Périphériques détectés</h3>
+                        <div id="devicesList"></div>
+                    </div>
+                    
+                    <div class="result-card hidden" id="cacheResults">
+                        <h3>🧹 Nettoyage du cache</h3>
+                        <p id="cacheStatus">Analyse en cours...</p>
+                    </div>
+                    
+                    <div class="result-card hidden" id="sysResults">
+                        <h3>⚙️ Configuration système</h3>
+                        <div id="sysInfo"></div>
+                    </div>
+                    
+                    <div class="result-card hidden" id="adviceResults">
+                        <h3>💡 Conseils d'optimisation</h3>
+                        <ul class="advice-list" id="adviceList"></ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>PcVerify v1.0 | Logiciel de vérification et optimisation PC</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
