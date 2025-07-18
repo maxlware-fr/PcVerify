@@ -1,0 +1,23 @@
+{
+  "name": "pcverify",
+  "version": "1.0.0",
+  "description": "Logiciel de vérification et d'optimisation PC",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . PcVerify --platform=win32 --arch=x64 --out=dist --overwrite",
+    "package-mac": "electron-packager . PcVerify --platform=darwin --arch=x64 --out=dist --overwrite",
+    "package-linux": "electron-packager . PcVerify --platform=linux --arch=x64 --out=dist --overwrite"
+  },
+  "author": "Maxlware",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-packager": "^17.1.1"
+  },
+  "dependencies": {
+    "systeminformation": "^5.18.9",
+    "tmp": "^0.2.1",
+    "fs-extra": "^11.1.1"
+  }
+}
